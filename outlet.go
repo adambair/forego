@@ -81,13 +81,6 @@ func (of *OutletFactory) WriteLine(left, right string, leftC, rightC ct.Color, i
 	formatter := fmt.Sprintf("%%-%ds | ", of.Padding)
 	fmt.Printf(formatter, left)
 
-	if isError {
-		ct.ChangeColor(ct.Red, true, ct.None, true)
-	} else {
-		ct.ResetColor()
-	}
+	ct.ResetColor()
 	fmt.Println(right)
-	if isError {
-		ct.ResetColor()
-	}
 }
