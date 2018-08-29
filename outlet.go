@@ -64,7 +64,7 @@ func (of *OutletFactory) LineReader(wg *sync.WaitGroup, name string, index int, 
 }
 
 func (of *OutletFactory) SystemOutput(str string) {
-	of.WriteLine("forego", str, ct.White, ct.None, false)
+	of.WriteLine("system", str, ct.White, ct.None, false)
 }
 
 func (of *OutletFactory) ErrorOutput(str string) {
