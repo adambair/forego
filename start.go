@@ -210,7 +210,7 @@ func (f *Forego) startProcess(idx, procNum int, proc ProcfileEntry, env Env, of 
 	go of.LineReader(pipeWait, procName, idx, stdout, false)
 	go of.LineReader(pipeWait, procName, idx, stderr, true)
 
-	of.SystemOutput(fmt.Sprintf("starting %s on port %d", procName, port))
+	of.SystemOutput(fmt.Sprintf("starting %s", procName))
 
 	finished := make(chan struct{}) // closed on process exit
 
